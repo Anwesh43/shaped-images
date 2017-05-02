@@ -26,10 +26,15 @@ class ShapedImage {
     drawShapedImage(context,w,h,image) {
       context.beginPath()
       this.definePath(context,w,h)
+      context.lineWidth = w/50
+      context.lineJoin = 'round'
+      context.lineCap = 'round'
+      context.strokeStyle = '#BDBDBD'
+      context.stroke()
       context.clip()
-      context.drawImage(image,0,0,w,h)
+      context.drawImage(image,w/20,h/20,w-w/10,h-h/10)
     }
     definePath(context,w,h) {
-      
+
     }
 }

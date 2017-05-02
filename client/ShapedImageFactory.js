@@ -1,13 +1,13 @@
 class ShapedImageFactory {
-    getCircleShapedImage(src,x,y,w,h) {
-        const circleShapedImage = new CircleShapedImage(src,w,h)
+    getCircleShapedImage(src,x,y,r) {
+        const circleShapedImage = new CircleShapedImage(src,r)
         this.createShapedImage(circleShapedImage,x,y)
     }
     createShapedImage(shapedImage,x,y) {
         shapedImage.create(x,y)
     }
-    getTriangleShapedImage(src,x,y,w,h) {
-        const triangleShapedImage = new TriangleShapedImage(src,w,h)
+    getTriangleShapedImage(src,x,y,a) {
+        const triangleShapedImage = new TriangleShapedImage(src,a)
         this.createShapedImage(triangleShapedImage,x,y)
     }
 }
